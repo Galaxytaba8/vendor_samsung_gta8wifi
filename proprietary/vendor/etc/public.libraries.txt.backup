@@ -1,0 +1,22 @@
+# vendor public libraries
+#Tab A8 code for P211028-06925 add by gaozhenyu at 2021.10.29 start
+libBokeh2Frames.so 32
+libbokeh_gaussian_cap.so 32
+libsprdbokeh.so 32
+libSegLite.so 32
+libjpeg_hw_sprd.so
+libinterface.so 32
+libverify.so 32
+libkey.so 32
+libinfo.so 32
+libportrait_scene_cap.so 32
+libTfliteWrapper.so 32
+libDefog.so 32
+#Tab A8 code for P211028-06925 add by gaozhenyu at 2021.10.29 end
+#Tab A8 code for P211008-01500 by dinghao at 2021/1013 start
+libOpenCL.so
+libOpenCL.so.1
+libOpenCL.so.1.1
+libOpenCL.so.1.2
+#Tab A8 code for P211008-01500 by dinghao at 2021/1013 end
+

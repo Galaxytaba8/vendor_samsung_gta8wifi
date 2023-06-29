@@ -1,0 +1,206 @@
+  <root>
+  <!--
+  SensorRole support list:
+      single_ir, single_macro
+      dualcam_master, dualcam_slave
+      multicam_superwide, multicam_wide,multicam_tele
+      stl3d_rgb, stl3d_ir_left, stl3d_ir_right
+
+  Rules:
+      1. SensorRole string is the back part of enum sensor_role
+         in cmr_common.h, convert to lowercase letters.
+      2. If no SensorRole, regard single as default.
+      3. Max SensorRole configured number of a sensor is 8,
+         SensorRole number beyond 8 will be ignored.
+      4. At the same facing, the same SensorRole only can exist
+         one for different sensors. If multiple, only the first one
+         is valid. For example, at Facing BACK, only support one
+         dualcam_master, the next dualcam_master will be ignored.
+         But you can define a dualcam_master at Facing FRONT at the
+         same time.
+      5. For the same sensor, the SensorRole of same type only can
+         exist one. (Generally the same type SensorRoles are mutually
+         exclusive.) If multiple, only the last one is valid. For
+         example, sensor ov32a1q has a SensorRole dualcam_master,
+         then has a SensorRole dualcam_slave, the final dualcam
+         SensorRole of ov32a1q is dualcam_slave. But you can define
+         a multicam_wide for ov32a1q at the same time.
+      6. SensorRoles should be added continuously after Resource_cost.
+         Please don't put them in other place.
+      7. SensorRoles can be added without order. For example, you can
+         input dualcam_master first, then input multicam_wide; also can
+         input multicam_wide first, then input dualcam_master.
+  -->
+  <!-->
+  sensor id 0
+  <-->
+  <!-- Tab A8 code for AX6300DEV-13 by lisizhou at 2021/7/31 start -->
+  <!-- Tab A8 code for AX6300DEV-13 by majunfeng at 2021/8/14 start -->
+      <CameraModuleCfg>
+        <SlotId>0</SlotId>
+        <SensorName>a801_gc8034_backly</SensorName>
+        <Facing>BACK</Facing>
+        <Orientation>90</Orientation>
+        <Resource_cost>55</Resource_cost>
+        <VCM>
+           <AfName>a801_gc8034_backly_gt9769</AfName>
+           <Mode>0</Mode>
+        </VCM>
+        <OTP>
+           <E2prom>
+              <OtpName>general</OtpName>
+              <I2cAddr>0xA0</I2cAddr>
+              <E2promNum>0</E2promNum>
+              <E2promSize>16384</E2promSize>
+           </E2prom>
+        </OTP>
+        <TuningParameter>
+            <TuningName>a801_gc8034_backly</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+  <!-- Tab A8 code for AX6300DEV-13 by lisizhou at 2021/7/31 end -->
+      <CameraModuleCfg>
+        <SlotId>0</SlotId>
+        <SensorName>a802_hi846_backhlt</SensorName>
+        <Facing>BACK</Facing>
+        <Orientation>90</Orientation>
+        <Resource_cost>100</Resource_cost>
+        <VCM>
+           <AfName>a802_hi846_backhlt_fp5510</AfName>
+           <Mode>0</Mode>
+        </VCM>
+  <!-- Tab A8 code for AX6300DEV-13 by gaozhenyu at 2021/8/15 start -->
+        <OTP>
+            <E2prom>
+                <OtpName>general</OtpName>
+                <I2cAddr>0x42</I2cAddr>
+                <E2promNum>0</E2promNum>
+                <E2promSize>8192</E2promSize>
+            </E2prom>
+        </OTP>
+  <!-- Tab A8 code for AX6300DEV-13 by gaozhenyu at 2021/8/15 end -->
+        <TuningParameter>
+            <TuningName>a802_hi846_backhlt</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+      <CameraModuleCfg>
+        <SlotId>0</SlotId>
+        <SensorName>a803_gc08a3_backxl</SensorName>
+        <Facing>BACK</Facing>
+        <Orientation>90</Orientation>
+        <Resource_cost>50</Resource_cost>
+        <VCM>
+           <AfName>a803_gc08a3_backhxl_cn3927v</AfName>
+           <Mode>0</Mode>
+        </VCM>
+  <!-- Tab A8 code for AX6300DEV-13 by gaozhenyu at 2021/8/19 start -->
+        <OTP>
+            <E2prom>
+                <OtpName>general</OtpName>
+                <I2cAddr>0x62</I2cAddr>
+                <E2promNum>0</E2promNum>
+                <E2promSize>8192</E2promSize>
+            </E2prom>
+        </OTP>
+  <!-- Tab A8 code for AX6300DEV-13 by gaozhenyu at 2021/8/19 end -->
+        <TuningParameter>
+            <TuningName>a803_gc08a3_backxl</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+ <!-- Tab A8 code for AX6300DEV-13 by majunfeng at 2021/8/14 end -->
+  <!-- Tab A8 code for AX6300DEV-13 by gaozhenyu at 2021/9/15 end -->
+      <CameraModuleCfg>
+        <SlotId>0</SlotId>
+        <SensorName>a804_hi846_backxl</SensorName>
+        <Facing>BACK</Facing>
+        <Orientation>90</Orientation>
+        <Resource_cost>100</Resource_cost>
+        <VCM>
+           <AfName>a804_hi846_backxl_gt9772</AfName>
+           <Mode>0</Mode>
+        </VCM>
+        <OTP>
+            <E2prom>
+                <OtpName>general</OtpName>
+                <I2cAddr>0x42</I2cAddr>
+                <E2promNum>0</E2promNum>
+                <E2promSize>8192</E2promSize>
+            </E2prom>
+        </OTP>
+        <TuningParameter>
+            <TuningName>a804_hi846_backxl</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+  <!-- Tab A8 code for AX6300DEV-13 by gaozhenyu at 2021/9/15 end -->
+  <!-->
+  sensor id 1
+  <-->
+  <!--Tab A8  code for AX6300DEV-13 by wuwenjie at 20210809 start -->
+      <CameraModuleCfg>
+        <SlotId>1</SlotId>
+        <SensorName>a801_gc5035_frontly</SensorName>
+        <Facing>FRONT</Facing>
+        <Orientation>270</Orientation>
+        <Resource_cost>100</Resource_cost>
+  <!-- Tab A8 code for AX6300DEV-13 by gaozhenyu at 2021/8/15 start -->
+        <OTP>
+            <E2prom>
+                <OtpName>general</OtpName>
+                <I2cAddr>0xa4</I2cAddr>
+                <E2promNum>0</E2promNum>
+                <E2promSize>8192</E2promSize>
+            </E2prom>
+        </OTP>
+        <TuningParameter>
+            <TuningName>a801_gc5035_frontly</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+  <!-- Tab A8 code for AX6300DEV-13 by wuwenjie at 20210811 start -->
+      <CameraModuleCfg>
+        <SlotId>1</SlotId>
+        <SensorName>a802_hi556_fronthlt</SensorName>
+        <Facing>FRONT</Facing>
+        <Orientation>270</Orientation>
+        <Resource_cost>100</Resource_cost>
+        <OTP>
+            <E2prom>
+                <OtpName>general</OtpName>
+                <I2cAddr>0x50</I2cAddr>
+                <E2promNum>0</E2promNum>
+                <E2promSize>2766</E2promSize>
+            </E2prom>
+        </OTP>
+        <TuningParameter>
+            <TuningName>a802_hi556_fronthlt</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+  <!-- Tab A8 code for AX6300DEV-13 by wuwenjie at 20210811 end -->
+      <CameraModuleCfg>
+        <SlotId>1</SlotId>
+        <SensorName>a803_gc5035_frontdd</SensorName>
+        <Facing>FRONT</Facing>
+        <Orientation>270</Orientation>
+        <Resource_cost>100</Resource_cost>
+        <OTP>
+            <E2prom>
+                <OtpName>general</OtpName>
+                <I2cAddr>0xa6</I2cAddr>
+                <E2promNum>0</E2promNum>
+                <E2promSize>8192</E2promSize>
+            </E2prom>
+        </OTP>
+  <!-- Tab A8 code for AX6300DEV-13 by gaozhenyu at 2021/8/15 end -->
+        <TuningParameter>
+            <TuningName>a803_gc5035_frontdd</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+  <!--Tab A8  code for AX6300DEV-13 by wuwenjie at 20210809 end -->
+  <!-->
+  sensor id 2
+  <-->
+
+  <!-->
+  sensor id 3
+  <-->
+
+  </root>

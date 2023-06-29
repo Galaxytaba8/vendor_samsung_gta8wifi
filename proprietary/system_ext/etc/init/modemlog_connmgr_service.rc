@@ -1,0 +1,3 @@
+service modemlog_connmgr_service /system_ext/bin/modemlog_connmgr_service
+    class main
+    user root

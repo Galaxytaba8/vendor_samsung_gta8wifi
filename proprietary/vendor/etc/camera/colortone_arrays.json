@@ -1,0 +1,37 @@
+[
+  {
+    "mode": "normal",
+    "module": [
+    ]
+  },
+  {
+    "mode": "bright",
+    "module": [
+      {
+        "name": "a801_gc5035_frontly",
+        "wb": "4900",
+        "ev": "4"
+      },
+      {
+        "name": "a802_hi556_fronthlt",
+        "wb": "4900",
+        "ev": "4"
+      },
+      {
+        "name": "a803_gc5035_frontdd",
+        "wb": "4900",
+        "ev": "4"
+      },
+      {
+        "name": "gc5035_dd_mipi_raw",
+        "wb": "10000",
+        "ev": "-21"
+      },
+      {
+        "name": "gc5035_xl_mipi_raw",
+        "wb": "10000",
+        "ev": "-21"
+      }
+    ]
+  }
+]
