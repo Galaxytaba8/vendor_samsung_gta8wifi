@@ -8,7 +8,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     vendor/samsung/gta8wifi/proprietary/lib/libaptX_encoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libaptX_encoder.so \
     vendor/samsung/gta8wifi/proprietary/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libaptX_encoder.so \
-    vendor/samsung/gta8wifi/proprietary/system_ext/apex/com.android.vndk.v30.apex:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30.apex \
     vendor/samsung/gta8wifi/proprietary/system_ext/bin/apdumper:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/apdumper \
     vendor/samsung/gta8wifi/proprietary/system_ext/bin/aprctl:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/aprctl \
     vendor/samsung/gta8wifi/proprietary/system_ext/bin/cmd_services:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/cmd_services \
@@ -75,9 +74,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/gta8wifi/proprietary/system_ext/etc/permissions/androidx.window.extensions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/androidx.window.extensions.xml \
     vendor/samsung/gta8wifi/proprietary/system_ext/etc/permissions/com.android.carrierconfig.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.carrierconfig.xml \
     vendor/samsung/gta8wifi/proprietary/system_ext/etc/permissions/com.android.storagemanager.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.storagemanager.xml \
-    vendor/samsung/gta8wifi/proprietary/system_ext/etc/permissions/com.android.systemui.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.systemui.xml \
     vendor/samsung/gta8wifi/proprietary/system_ext/etc/permissions/com.android.telephony.wifiordataonly.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.telephony.wifiordataonly.xml \
-    vendor/samsung/gta8wifi/proprietary/system_ext/etc/permissions/com.samsung.systemui.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.samsung.systemui.xml \
     vendor/samsung/gta8wifi/proprietary/system_ext/etc/permissions/com.unisoc.sdk.common.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.unisoc.sdk.common.xml \
     vendor/samsung/gta8wifi/proprietary/system_ext/etc/permissions/privapp-permissions-google-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-google-system-ext.xml \
     vendor/samsung/gta8wifi/proprietary/system_ext/etc/permissions/smartlink_sdk.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/smartlink_sdk.xml \
@@ -1401,15 +1398,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ImsSettings \
     ImsSettings.apk \
-    CarrierConfig \
-    GoogleFeedback \
-    GoogleServicesFramework \
-    GoogleServicesFramework.apk \
-    SetupWizard \
-    SetupWizard.apk \
-    StorageManager \
-    SystemUI \
-    WallpaperCropper \
     androidx.window.extensions \
     com.unisoc.sdk.common \
     smartlink_sdk \
